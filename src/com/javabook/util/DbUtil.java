@@ -36,17 +36,7 @@ public class DbUtil {
 			con.close();
 		}
 	}
-	
-	public static void main(String[] args) {
-		DbUtil dbUtil=new DbUtil();
-		try {
-			dbUtil.getCon();
-			System.out.println("数据库连接成功");
-		} catch (Exception e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
-			System.out.println("数据库连接失败");
-		}
-	}
+
+
 	
 }
