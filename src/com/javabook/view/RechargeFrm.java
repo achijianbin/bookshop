@@ -120,18 +120,18 @@ public class RechargeFrm extends JInternalFrame {
 	private void cusermonkeyUpateActionperformed(ActionEvent evt) {
 		// TODO 自动生成的方法存根
 		String id=this.idTxt.getText();	
-		String monkey=this.monkeyTxt.getText();
+		float monkey= Float.parseFloat(this.monkeyTxt.getText());
 		if(StringUtil.isEmpty(id)){
 			JOptionPane.showMessageDialog(null, "用户名不能为空！");
 			return;
 		}
-		if(StringUtil.isEmpty(monkey)){
+		if(StringUtil.isEmpty(String.valueOf(monkey))){
 			JOptionPane.showMessageDialog(null, "金额不能为空！");
 			return;
 		}
-		
-		
-		Cuser cuser= new Cuser(id,Float.parseFloat(monkey));
+
+
+		Cuser cuser= new Cuser(id,Float.parseFloat(String.valueOf(monkey)));
 		Connection con=null;
 		try{
 			con=dbUtil.getCon();
@@ -153,7 +153,7 @@ public class RechargeFrm extends JInternalFrame {
 				e.printStackTrace();
 			}
 		}
-		
+
 	}
 	/**
 	 * 表单重置处理

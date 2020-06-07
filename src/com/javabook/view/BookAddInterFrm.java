@@ -208,7 +208,7 @@ public class BookAddInterFrm extends JInternalFrame {
 		// TODO 自动生成的方法存根
 		String bookName=this.bookNameTxt.getText();
 		String author=this.authorTxt.getText();
-		String price=this.priceTxt.getText();
+		Float price= Float.valueOf(this.priceTxt.getText());
 		String bookDesc=this.bookDescTxt.getText();
 		String bookNumber=this.bookNumTxt.getText();
 		if (StringUtil.isEmpty(bookName)) {
@@ -219,7 +219,7 @@ public class BookAddInterFrm extends JInternalFrame {
 			JOptionPane.showMessageDialog(null, "图书作者不能为空");
 			return;
 		}
-		if (StringUtil.isEmpty(price)) {
+		if (StringUtil.isEmpty(String.valueOf(price))) {
 			JOptionPane.showMessageDialog(null, "图书价格不能为空");
 			return;
 		}
@@ -230,7 +230,7 @@ public class BookAddInterFrm extends JInternalFrame {
 		BookType bookType=(BookType)bookTypejcb.getSelectedItem();
 		int bookTypeId=bookType.getId();
 		
-		Book book = new Book(bookName, author, Float.parseFloat(price),bookTypeId, bookDesc,Integer.valueOf(bookNumber));
+		Book book = new Book(bookName, author, Float.parseFloat(String.valueOf(price)),bookTypeId, bookDesc,Integer.valueOf(bookNumber));
 		Connection con=null;
 		try{
 			con=dbUtil.getCon();
