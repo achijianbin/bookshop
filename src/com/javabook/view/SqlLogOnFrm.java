@@ -86,14 +86,14 @@ public class SqlLogOnFrm extends JFrame {
 		JLabel tex = new JLabel("\u6570\u636E\u5E93\u540D:");
 		tex.setFont(new Font("свт╡", Font.PLAIN, 18));
 		
-		SqlName = new JTextField();
+		SqlName = new JTextField("bookshop");
 		SqlName.setFont(new Font("свт╡", Font.PLAIN, 18));
 		SqlName.setColumns(10);
 		
 		JLabel userName = new JLabel("\u6570\u636E\u5E93\u7528\u6237\u540D:");
 		userName.setFont(new Font("свт╡", Font.PLAIN, 18));
 		
-		UserName = new JTextField();
+		UserName = new JTextField("sa");
 		UserName.setFont(new Font("свт╡", Font.PLAIN, 18));
 		UserName.setColumns(10);
 		
@@ -101,7 +101,7 @@ public class SqlLogOnFrm extends JFrame {
 		pa.setFont(new Font("свт╡", Font.PLAIN, 18));
 		pa.setToolTipText("");
 		
-		passwordField = new JPasswordField();
+		passwordField = new JPasswordField("201835020129");
 		
 		
 		JButton btnNewButton = new JButton("\u767B\u5F55");

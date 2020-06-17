@@ -1,5 +1,8 @@
 package com.javabook.util;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * 字符串工具类
  * 
@@ -93,4 +96,39 @@ public class StringUtil {
 			return false;
 		}
 	}
+
+	/**
+	 * 判断手机号
+	 * @param str
+	 * @return
+	 */
+	public static boolean isMobile(String str) {
+		Pattern p = null;
+		Matcher m = null;
+		boolean b = false;
+		p = Pattern.compile("^[1][3,4,5,7,8][0-9]{9}$"); // 验证手机号
+		m = p.matcher(str);
+		b = m.matches();
+		return b;
+	}
+
+	/**
+	 * 判断邮箱
+	 * @param str
+	 * @return
+	 */
+	public static boolean isEmail(String str) {
+		if (str == null)
+			return false;
+		String regEx1 = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
+		Pattern p;
+		Matcher m;
+		p = Pattern.compile(regEx1);
+		m = p.matcher(str);
+		if (m.matches())
+			return true;
+		else
+			return false;
+	}
+
 }

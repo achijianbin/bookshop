@@ -258,6 +258,12 @@ public class SignUpFrm extends JFrame {
 		else if(StringUtil.isPasLength(passWord)) {
 			JOptionPane.showMessageDialog(null, "密码不能小于八位数字！");
 		}
+		else if(!StringUtil.isEmail(email)){
+			JOptionPane.showMessageDialog(null, "邮箱格式不正确！");
+		}
+		else if(!StringUtil.isMobile(phone)){
+			JOptionPane.showMessageDialog(null, "手机号码格式不正确！");
+		}
 		else {
 		Cuser cuser=new Cuser(id,name,passWord,email,phone);
 		Connection con=null;

@@ -11,6 +11,17 @@ public class No {
 		super();
 		// TODO 自动生成的构造函数存根
 	}
+	
+	
+	
+	public No(String bookname, String cuserid) {
+		super();
+		this.cuserid = cuserid;
+		this.bookname = bookname;
+	}
+
+
+
 	public String getBuyid() {
 		return buyid;
 	}

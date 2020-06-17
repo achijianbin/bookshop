@@ -131,6 +131,7 @@ public class CuserBookSearchFrm extends JInternalFrame {
 		lblNewLabel_5.setFont(new Font("幼圆", Font.PLAIN, 16));
 		
 		priceTxt = new JTextField();
+		priceTxt.setEditable(false);
 		priceTxt.setFont(new Font("幼圆", Font.PLAIN, 16));
 		priceTxt.setColumns(10);
 		
@@ -371,6 +372,7 @@ public class CuserBookSearchFrm extends JInternalFrame {
 			if(addNum==1){
 				JOptionPane.showMessageDialog(null, "图书已添加到购物车！");
 				shopcarDao.updatebooknumber(con, shopcar);
+				this.fillTable(new Book());
 				 resetValue();
 			}else{
 				JOptionPane.showMessageDialog(null, "图书添加失败！");
