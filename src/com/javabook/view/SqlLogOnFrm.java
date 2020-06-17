@@ -178,7 +178,7 @@ public class SqlLogOnFrm extends JFrame {
 					.addContainerGap(31, Short.MAX_VALUE))
 		);
 		
-		JLabel lblNewLabel_1 = new JLabel("jianaiddnais");
+
 		contentPane.setLayout(gl_contentPane);
 		this.setLocationRelativeTo(null);
 	

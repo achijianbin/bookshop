@@ -25,6 +25,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
 import java.awt.Font;
 import java.awt.Graphics;
+import javax.swing.JTextPane;
+import java.awt.Color;
 
 public class SignUpFrm extends JFrame {
 
@@ -139,6 +141,12 @@ public class SignUpFrm extends JFrame {
 		passwordTxt = new JPasswordField();
 		
 		passwordEnterTxt = new JPasswordField();
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setOpaque(false); 
+		textPane.setEnabled(false);
+		textPane.setFont(new Font("свт╡", Font.PLAIN, 14));
+		textPane.setText("\u7531\u5B57\u6BCD\u548C\u6570\u5B57\u7EC4\u6210\uFF0C\u4E0D\u8D85\u8FC7\u516B\u4F4D\u6570");
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -153,16 +161,18 @@ public class SignUpFrm extends JFrame {
 						.addComponent(label_2, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE))
 					.addGap(10)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(userPhoneTxt, GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
-						.addComponent(userIdTxt, GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
-						.addComponent(userEmailTxt)
+						.addComponent(userPhoneTxt, GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+						.addComponent(userIdTxt, GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+						.addComponent(userEmailTxt, 119, 119, 119)
 						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
 							.addComponent(passwordTxt, GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
 							.addGroup(gl_contentPane.createSequentialGroup()
 								.addPreferredGap(ComponentPlacement.RELATED)
 								.addComponent(passwordEnterTxt))
 							.addComponent(userNameTxt, GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)))
-					.addGap(200))
+					.addGap(18)
+					.addComponent(textPane, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
+					.addGap(54))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(96)
 					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
@@ -170,50 +180,50 @@ public class SignUpFrm extends JFrame {
 					.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 106, GroupLayout.PREFERRED_SIZE)
 					.addGap(37)
 					.addComponent(button, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(89, Short.MAX_VALUE))
+					.addContainerGap(87, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(53)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(117)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(passwordTxt, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNewLabel_1)))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(53)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(lblNewLabel)
-								.addComponent(userIdTxt, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE))))
-					.addGap(40)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_2)
-						.addComponent(passwordEnterTxt, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE))
-					.addGap(33)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(label)
-						.addComponent(userNameTxt, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(42)
-							.addComponent(label_1))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(31)
-							.addComponent(userEmailTxt)))
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(39)
-							.addComponent(label_2))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(31)
-							.addComponent(userPhoneTxt)))
+								.addComponent(userIdTxt, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE))
+							.addGap(37)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(passwordTxt, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+								.addComponent(lblNewLabel_1))
+							.addGap(40)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(lblNewLabel_2)
+								.addComponent(passwordEnterTxt, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE))
+							.addGap(33)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(label)
+								.addComponent(userNameTxt, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(42)
+									.addComponent(label_1))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(31)
+									.addComponent(userEmailTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(39)
+									.addComponent(label_2))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(31)
+									.addComponent(userPhoneTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+						.addComponent(textPane, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE))
 					.addGap(72)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
 						.addComponent(button, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(btnNewButton_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(btnNewButton, GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE))
-					.addContainerGap(152, Short.MAX_VALUE))
+					.addContainerGap(60, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 		this.setLocationRelativeTo(null);

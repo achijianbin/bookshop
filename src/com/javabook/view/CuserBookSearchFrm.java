@@ -362,13 +362,14 @@ public class CuserBookSearchFrm extends JInternalFrame {
 		int booknumber=Integer.valueOf(this.booknumberTxt.getText());
 		Date date = new Date();
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
+
 		int bookid=Integer.parseInt(idTxt.getText());
 		ShopCar shopcar=new ShopCar(bookname, booknumber,df.format(date),Float.parseFloat(price),cuserid,bookid,buyid);
 		Connection con=null;
 		try{
 			con=dbUtil.getCon();		
 			int addNum=ShopCarDao.add(con, shopcar);
+			
 			if(addNum==1){
 				JOptionPane.showMessageDialog(null, "图书已添加到购物车！");
 				shopcarDao.updatebooknumber(con, shopcar);
